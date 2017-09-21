@@ -104,6 +104,7 @@ protected:
     int nToCheckBlockUpgradeMajority;
     int64_t nTargetTimespan;
     int64_t nTargetTimespanx;
+    int64_t nTargetTimespans;
     int64_t nTargetSpacing;
     int nMinerThreads;
     long nMaxTipAge;
