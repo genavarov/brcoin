@@ -22,16 +22,16 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
     }
     else{
 	if (pindexLast->nHeight+1 < 120000) // Briliantcoin: block < 1200000
-    { //New non Standard retargeting eXs
-        //int64_t nParamsTargetTimespan = Params().TargetTimespans();
-		//int64_t nParamsInterval = Params().Intervals();
-		return GetNextWorkRequireds(pindexLast, pblock);
-    }
-    else
     { //New non Standard retargeting eX
 		//int64_t nParamsTargetTimespan = Params().TargetTimespanx();
 		//int64_t nParamsInterval = Params().Intervalx();
 		return GetNextWorkRequiredx(pindexLast, pblock);
+    }
+    else
+    { //New non Standard retargeting eXs
+        //int64_t nParamsTargetTimespan = Params().TargetTimespans();
+		//int64_t nParamsInterval = Params().Intervals();
+		return GetNextWorkRequireds(pindexLast, pblock);
     }
 	}
 
