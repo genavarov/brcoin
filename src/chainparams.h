@@ -69,9 +69,11 @@ public:
     bool RequireStandard() const { return fRequireStandard; }
     int64_t TargetTimespan() const { return nTargetTimespan; }
 	int64_t TargetTimespanx() const { return nTargetTimespanx; }
+	int64_t TargetTimespans() const { return nTargetTimespans; }
     int64_t TargetSpacing() const { return nTargetSpacing; }
     int64_t Interval() const { return nTargetTimespan / nTargetSpacing; }
     int64_t Intervalx() const { return nTargetTimespanx / nTargetSpacing; }
+    int64_t Intervals() const { return nTargetTimespans / nTargetSpacing; }
     int64_t MaxTipAge() const { return nMaxTipAge; }
     /** Make miner stop after a block is found. In RPC, don't return until nGenProcLimit blocks are generated */
     bool MineBlocksOnDemand() const { return fMineBlocksOnDemand; }

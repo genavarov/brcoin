@@ -61,16 +61,20 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
         ( 68886, uint256("0x09cb7123227f99b175fe40bee596191045bdb78591094de518bc57034c5160ef"))
         ( 68911, uint256("0x3484b1975ce95f8e8ec75b95767d947435855c61a0cfb75197d47141f51d9c05"))
         ( 68912, uint256("0xc1e07231530f16428ae3daad97901d9ad430ec50e2678527cb176331c014abf6"))
+        ( 82333, uint256("0x48a63d48372c96432547bd40eb912bc95c990ec44cdf20e05bc1a622f9ac872f"))
         ( 82334, uint256("0x5a2456bf4f18b0257ed294a237f36196485252402a019bd2f7ec2d9222f0c604"))
         ( 96544, uint256("0x0ebc20cc206e119ed53f6f0130badebdaa07d75114e91a8e8911a34cd4b25f0d"))
         ( 96837, uint256("0x05a60a9cff06d177fdc0c63cae9a64bbc776fb7c3ebcf6319dcf61e76e267aba"))
         ( 98000, uint256("0x0fee2b491f069da2865cdecd4cef6e0eafed7882b1bb0e0d89dc8e6e91820c65"))
         ( 99000, uint256("0x0480f1e884cf7495f4fafe4a992e5e1dfc0011293e36181c909dc8dc3b7488e6"))
+        ( 110000, uint256("0x06a9bc974358ed5b2c0751723559921d512c85aa6c2da1e73cd4b7091573f613"))
+        ( 111401, uint256("0x639dd70470c381d361ea32fe354ab867e28de6b623f91e35c873c07c7dfd9593"))
+        ( 111500, uint256("0x06a9bc974358ed5b2c0751723559921d512c85aa6c2da1e73cd4b7091573f613"))
         ;
 static const Checkpoints::CCheckpointData data = {
         &mapCheckpoints,
-        1504038231, // * UNIX timestamp of last checkpoint block d77cb63a40042d73a83142383c7872c123cda7253db1d9c0effc8a029ca857b2
-        99519,   // * total number of transactions between genesis and last checkpoint
+        1506005861, // * UNIX timestamp of last checkpoint block d77cb63a40042d73a83142383c7872c123cda7253db1d9c0effc8a029ca857b2
+        112238,   // * total number of transactions between genesis and last checkpoint
                     //   (the tx=... number in the SetBestChain debug.log lines)
         1152.0     // * estimated number of transactions per day after checkpoint
     };
@@ -126,6 +130,7 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 3.5 * 24 * 60 * 60; // 3.5 days
         nTargetTimespanx = 10 * 60; // 10 minutes
+        nTargetTimespans = 5 * 60; // 5 minutes
         nTargetSpacing = 2.5 * 60; // 2.5 minutes
         nMaxTipAge = 24 * 60 * 60;
 
@@ -232,6 +237,7 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 3.5 * 24 * 60 * 60; // 3.5 days
         nTargetTimespanx = 10 * 60; // 10 minutes
+        nTargetTimespans = 5 * 60; // 5 minutes
         nTargetSpacing = 2.5 * 60; // 2.5 minutes
         nMaxTipAge = 24 * 60 * 60;
         //nMaxTipAge = 0x7fffffff;
@@ -315,6 +321,7 @@ public:
         nMinerThreads = 1;
         nTargetTimespan = 3.5 * 24 * 60 * 60; // 3.5 days
         nTargetTimespanx = 10 * 60; // 10 minutes
+        nTargetTimespans = 5 * 60; // 5 minutes
         nTargetSpacing = 2.5 * 60; // 2.5 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         nMaxTipAge = 24 * 60 * 60;
