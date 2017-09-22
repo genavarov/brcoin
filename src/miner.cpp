@@ -91,13 +91,13 @@ void UpdateTime(CBlockHeader* pblock, const CBlockIndex* pindexPrev)
 		//LogPrintf("Testing 0 in BriliantcoinMiner : Nowback: %s NowCent: %s\n", nNowBack, nNowCent);
 			
 		if((pindexPrev->GetBlockTime() + 1 + Params().TargetSpacing() + Params().TargetSpacing() - nNowBack) < GetAdjustedTime()){
-			pblock->nTime = std::min(pindexPrev->GetBlockTime()+ 1 + Params().TargetSpacing() + 600 , GetAdjustedTime());
+			pblock->nTime = std::min(pindexPrev->GetBlockTime()+ 1 + Params().TargetSpacing() + 420 , GetAdjustedTime());
 		    //LogPrintf("Testing 1 in BriliantcoinMiner : Min Central time: %s over limit: (%s), Real -Back time create new block ! wait...\n", GetAdjustedTime(), pindexPrev->GetBlockTime()+ 1 + Params().TargetSpacing() + 30);
 		}else if((pindexPrev->GetBlockTime() + 1 + Params().TargetSpacing() - nNowBack) < GetAdjustedTime()){
-			pblock->nTime = std::min(pindexPrev->GetBlockTime()+ 1 + Params().TargetSpacing() + 360 , GetAdjustedTime());
+			pblock->nTime = std::min(pindexPrev->GetBlockTime()+ 1 + Params().TargetSpacing() + 180 , GetAdjustedTime());
 		    //LogPrintf("Testing 2 in BriliantcoinMiner : Min Central time: %s over limit: (%s), Real -Back time create new block ! wait...\n", GetAdjustedTime(), pindexPrev->GetBlockTime()+ 1 + Params().TargetSpacing() + 10);
 		}else if((pindexPrev->GetBlockTime() + 1 + Params().TargetSpacing()) < GetAdjustedTime()){
-			pblock->nTime = std::min(pindexPrev->GetBlockTime()+ 1 + Params().TargetSpacing() + 50 , GetAdjustedTime());
+			pblock->nTime = std::min(pindexPrev->GetBlockTime()+ 1 + Params().TargetSpacing() + 30 , GetAdjustedTime());
 		    //LogPrintf("Testing 3 in BriliantcoinMiner : Min Central time: %s over limit: (%s), Real time create new block ! wait...\n", GetAdjustedTime(), pindexPrev->GetBlockTime()+ 1 + Params().TargetSpacing() + 5);
 		}else{
 			pblock->nTime = std::max(pindexPrev->GetMedianTimePast()+1, GetAdjustedTime());	
@@ -493,7 +493,7 @@ void static BitcoinMiner(CWallet *pwallet)
 					{
 						LogPrintf("Warn in BriliantcoinMiner : Invalid zero amount on balance - unable for fast mining!\n");						
 						//return;
-						MilliSleep(105000);
+						MilliSleep(145000);
 				    }
 					else
 					{   
@@ -502,7 +502,7 @@ void static BitcoinMiner(CWallet *pwallet)
 						{
 							LogPrintf("BriliantcoinMiner : Alowed balance: %s Your balance: %s It is not alowed fast mining!\n", FormatMoney(nSubsidyMin), FormatMoney(nValue));
 							//return;
-							MilliSleep(105000);
+							MilliSleep(145000);
 						}
 						else
 						{	
@@ -522,7 +522,7 @@ void static BitcoinMiner(CWallet *pwallet)
 					{
 						LogPrintf("Warn in BriliantcoinMiner : Invalid zero amount on balance - unable for fast mining!\n");						
 						//return;
-						MilliSleep(105000);
+						MilliSleep(145000);
 				    }
 					else
 					{   
@@ -531,7 +531,7 @@ void static BitcoinMiner(CWallet *pwallet)
 						{
 							LogPrintf("BriliantcoinMiner : Alowed balance: %s Your balance: %s It is not alowed fast mining!\n", FormatMoney(nSubsidyMin), FormatMoney(nValue));
 							//return;
-							MilliSleep(105000);
+							MilliSleep(145000);
 						}
 						else
 						{	
@@ -551,7 +551,7 @@ void static BitcoinMiner(CWallet *pwallet)
 					{
 						LogPrintf("Warn in BriliantcoinMiner : Invalid zero amount on balance - unable for fast mining!\n");						
 						//return;
-						MilliSleep(120000);
+						MilliSleep(150000);
 				    }
 					else
 					{   
@@ -560,7 +560,7 @@ void static BitcoinMiner(CWallet *pwallet)
 						{
 							LogPrintf("BriliantcoinMiner : Alowed balance: %s Your balance: %s It is not alowed fast mining!\n", FormatMoney(nSubsidyMin), FormatMoney(nValue));
 							//return;
-							MilliSleep(120000);
+							MilliSleep(150000);
 						}
 						else
 						{	
@@ -580,7 +580,7 @@ void static BitcoinMiner(CWallet *pwallet)
 					{
 						LogPrintf("Warn in BriliantcoinMiner : Invalid zero amount on balance - unable for fast mining!\n");						
 						//return;
-						MilliSleep(130000);
+						MilliSleep(155000);
 				    }
 					else
 					{   
@@ -589,7 +589,7 @@ void static BitcoinMiner(CWallet *pwallet)
 						{
 							LogPrintf("BriliantcoinMiner : Alowed balance: %s Your balance: %s It is not alowed fast mining!\n", FormatMoney(nSubsidyMin), FormatMoney(nValue));
 							//return;
-							MilliSleep(130000);
+							MilliSleep(155000);
 						}
 						else
 						{	
@@ -609,7 +609,7 @@ void static BitcoinMiner(CWallet *pwallet)
 					{
 						LogPrintf("Warn in BriliantcoinMiner : Invalid zero amount on balance - unable for fast mining!\n");						
 						//return;
-						MilliSleep(140000);
+						MilliSleep(160000);
 				    }
 					else
 					{   
@@ -618,7 +618,7 @@ void static BitcoinMiner(CWallet *pwallet)
 						{
 							LogPrintf("BriliantcoinMiner : Alowed balance: %s Your balance: %s It is not alowed fast mining!\n", FormatMoney(nSubsidyMin), FormatMoney(nValue));
 							//return;
-							MilliSleep(140000);
+							MilliSleep(160000);
 						}
 						else
 						{	
@@ -638,7 +638,7 @@ void static BitcoinMiner(CWallet *pwallet)
 					{
 						LogPrintf("Warn in BriliantcoinMiner : Invalid zero amount on balance - unable for fast mining!\n");						
 						//return;
-						MilliSleep(145000);
+						MilliSleep(165000);
 				    }
 					else
 					{   
@@ -647,7 +647,7 @@ void static BitcoinMiner(CWallet *pwallet)
 						{
 							LogPrintf("BriliantcoinMiner : Alowed balance: %s Your balance: %s It is not alowed fast mining!\n", FormatMoney(nSubsidyMin), FormatMoney(nValue));
 							//return;
-							MilliSleep(145000);
+							MilliSleep(165000);
 						}
 						else
 						{	
