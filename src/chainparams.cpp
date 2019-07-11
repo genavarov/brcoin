@@ -70,11 +70,25 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
         ( 110000, uint256("0x06a9bc974358ed5b2c0751723559921d512c85aa6c2da1e73cd4b7091573f613"))
         ( 111401, uint256("0x639dd70470c381d361ea32fe354ab867e28de6b623f91e35c873c07c7dfd9593"))
         ( 111500, uint256("0x9351fe538afe6cf3e880680233732e9f6d579dea6c6ed144362eaf8f1dff4808"))
+        ( 120000, uint256("0x7d64c0de4b8f54fe31b5f913c73788a4a84f3e7c390bdf70115e94b8c2497f22"))
+        ( 140000, uint256("0x4248dead9734e93cb3582b9a229150d82e336a5c38aff6f7790f6ea86cd2681e"))
+        ( 160000, uint256("0xcb9cc825dc3ae201ae6b49db8b576ec435aa051f85ca91eda7300621ce1faa6f"))
+        ( 180000, uint256("0x152f175a22a803b1e8ef675827a218ec1bf1cc8ea614ba0a251132489e409f1a"))
+        ( 200000, uint256("0x9b3b68c58e36e41efd6a257483b8b38fe2fa81e3f8303ae04c9f5af9b988f03a"))
+        ( 210000, uint256("0xfbfa7ad296970e87f501675240de21d5ff419848c29158a579960f98cba839b5"))
+        ( 240000, uint256("0x5f583e57c283d7852069d61f8eafcccc0aab94ecfeb0fab540e3a20201559eff"))
+        ( 260000, uint256("0xb7680a04d81bcccb4bf6e698bdb73f502b0ab174c53076ddef506ef32c5261fd"))
+        ( 280000, uint256("0x47ddb900e7d4b0bd9182d87cae4d94db6f216ba2db66ce938be3edf2e5d934da"))
+        ( 300000, uint256("0x2e93e2f919aea103cb586f2a82460848418665b1ebc0c78beca37577f1189540"))
+        ( 320000, uint256("0xb083361d5443f2ced71aa49eb19fffb4956b148cb978d4cc7e70f5fe9b2c2ee2"))
+        ( 340000, uint256("0x7198fa8c9ac668837676b81f7c39aa12f9f087a798eb3f18807b5152afb517f9"))
+        ( 360000, uint256("0x6fe10bed686606c0f74bbf43321146a8f495e34b58d2f2847611b48b068816a4"))
+        ( 380000, uint256("0x9a92724b64f3f08ec789b22214f7a4803464fae14bb8eb48e8fcd0e5cb04a9f3"))
         ;
 static const Checkpoints::CCheckpointData data = {
         &mapCheckpoints,
-        1506005861, // * UNIX timestamp of last checkpoint block d77cb63a40042d73a83142383c7872c123cda7253db1d9c0effc8a029ca857b2
-        112238,   // * total number of transactions between genesis and last checkpoint
+        1562239916, // * UNIX timestamp of last checkpoint block d77cb63a40042d73a83142383c7872c123cda7253db1d9c0effc8a029ca857b2
+        381591,   // * total number of transactions between genesis and last checkpoint
                     //   (the tx=... number in the SetBestChain debug.log lines)
         1152.0     // * estimated number of transactions per day after checkpoint
     };
@@ -170,6 +184,10 @@ public:
 		vSeeds.push_back(CDNSSeedData("king4.odj.ru", "king4.odj.ru"));
 		vSeeds.push_back(CDNSSeedData("king5.odj.ru", "king5.odj.ru"));
 		
+		vSeeds.push_back(CDNSSeedData("nodea.exip.net", "nodea.exip.net"));
+		vSeeds.push_back(CDNSSeedData("nodeb.exip.net", "nodeb.exip.net"));
+		vSeeds.push_back(CDNSSeedData("nodec.exip.net", "nodec.exip.net"));
+		vSeeds.push_back(CDNSSeedData("nodes.exip.net", "nodes.exip.net"));
 		vSeeds.push_back(CDNSSeedData("node1.exip.net", "node1.exip.net"));
 		vSeeds.push_back(CDNSSeedData("node2.exip.net", "node2.exip.net"));
 		vSeeds.push_back(CDNSSeedData("node3.exip.net", "node3.exip.net"));
@@ -258,6 +276,10 @@ public:
 		vSeeds.push_back(CDNSSeedData("king4.odj.ru", "king4.odj.ru"));
 		vSeeds.push_back(CDNSSeedData("king5.odj.ru", "king5.odj.ru"));
 
+		vSeeds.push_back(CDNSSeedData("nodea.exip.net", "nodea.exip.net"));
+		vSeeds.push_back(CDNSSeedData("nodeb.exip.net", "nodeb.exip.net"));
+		vSeeds.push_back(CDNSSeedData("nodec.exip.net", "nodec.exip.net"));
+		vSeeds.push_back(CDNSSeedData("nodes.exip.net", "nodes.exip.net"));
 		vSeeds.push_back(CDNSSeedData("node1.exip.net", "node1.exip.net"));
 		vSeeds.push_back(CDNSSeedData("node2.exip.net", "node2.exip.net"));
 		vSeeds.push_back(CDNSSeedData("node3.exip.net", "node3.exip.net"));
